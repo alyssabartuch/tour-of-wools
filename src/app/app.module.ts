@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { WoolsComponent } from './wools/wools.component';
 import { WoolDetailComponent } from './wool-detail/wool-detail.component';
+import { WoolService } from './wool.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { WoolDetailComponent } from './wool-detail/wool-detail.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ WoolService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
