@@ -10,8 +10,6 @@ import { WoolService } from '../wool.service';
 })
 export class WoolsComponent implements OnInit {
 
-    selectedWool: Wool;
-
     wools: Wool[];
 
 //The parameter simultaneously defines a private woolService property and identifies it as a WoolService injection site.
@@ -21,13 +19,10 @@ export class WoolsComponent implements OnInit {
         this.getWools();
     }
 
-    onSelect(wool: Wool): void {
-        this.selectedWool = wool;
-    }
 
 //Function to retrieve the wools from the service.
-//waits for the Observable to emit the array of heroes— which could happen now or several minutes from now.
-//Then subscribe passes the emitted array to the callback, which sets the component's heroes property.
+//waits for the Observable to emit the array of wools— which could happen now or several minutes from now.
+//Then subscribe passes the emitted array to the callback, which sets the component's wools property.
     getWools(): void {
         this.woolService.getWools().subscribe(wools => this.wools = wools);
     }
