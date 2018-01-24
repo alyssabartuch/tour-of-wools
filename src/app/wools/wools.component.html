@@ -5,27 +5,4 @@
   </li>
 </ul>
 
-
-<div *ngIf="selectedWool">
-
-    <h2>{{ selectedWool.name | uppercase }} Details</h2>
-    <div><span>id: </span>{{ selectedWool.id }}</div>
-
-
-    <div>
-        <label>Name:
-          <input [(ngModel)]="selectedWool.name" placeholder="name">
-        </label>
-    </div>
-    <div>
-        <label>Month:
-          <input [(ngModel)]="selectedWool.month" placeholder="month">
-        </label>
-    </div>
-    <div>
-        <label>Fiber:
-          <input [(ngModel)]="selectedWool.fiber" placeholder="fiber">
-        </label>
-    </div>
-
-</div>
+<app-wool-detail [wool]="selectedWool"></app-wool-detail>
