@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Wool } from '../wool';
+import { WOOLS } from '../mock-wool-list';
 
 @Component({
   selector: 'app-wools',
@@ -8,6 +9,8 @@ import { Wool } from '../wool';
 })
 export class WoolsComponent implements OnInit {
 
+    wools = WOOLS;
+
     wool: Wool = {
         id: 1,
         name: 'Herding Cats',
@@ -15,7 +18,7 @@ export class WoolsComponent implements OnInit {
         month: 'March 2017'
     };
 
-    
+
 
     constructor() { }
 

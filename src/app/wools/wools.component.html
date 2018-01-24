@@ -1,3 +1,13 @@
+<h2>My Wool Stash</h2>
+<ul class="wools">
+  <li *ngFor="let wool of wools">
+    <span class="badge">{{wool.id}}</span> {{wool.name}}
+  </li>
+</ul>
+
+
+
+
 <h2>{{ wool.name | uppercase }} Details</h2>
 <div><span>id: </span>{{ wool.id }}</div>
 
