@@ -1,22 +1,22 @@
-<div *ngIf="selectedWool">
+<div *ngIf="wool">
 
-    <h2>{{ selectedWool.name | uppercase }} Details</h2>
-    <div><span>id: </span>{{ selectedWool.id }}</div>
+    <h2>{{ wool.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{ wool.id }}</div>
 
 
     <div>
         <label>Name:
-          <input [(ngModel)]="selectedWool.name" placeholder="name">
+          <input [(ngModel)]="wool.name" placeholder="name">
         </label>
     </div>
     <div>
         <label>Month:
-          <input [(ngModel)]="selectedWool.month" placeholder="month">
+          <input [(ngModel)]="wool.month" placeholder="month">
         </label>
     </div>
     <div>
         <label>Fiber:
-          <input [(ngModel)]="selectedWool.fiber" placeholder="fiber">
+          <input [(ngModel)]="wool.fiber" placeholder="fiber">
         </label>
     </div>
 
