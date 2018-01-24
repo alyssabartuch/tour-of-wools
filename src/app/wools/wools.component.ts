@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Wool } from '../wool';
-import { WOOLS } from '../mock-wool-list';
 import { WoolService } from '../wool.service';
 
 @Component({
@@ -10,10 +10,9 @@ import { WoolService } from '../wool.service';
 })
 export class WoolsComponent implements OnInit {
 
+    selectedWool: Wool;
 
     wools: Wool[];
-
-    selectedWool: Wool;
 
 //The parameter simultaneously defines a private woolService property and identifies it as a WoolService injection site.
     constructor(private woolService: WoolService) { }

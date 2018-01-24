@@ -8,6 +8,7 @@ import { WoolsComponent } from './wools/wools.component';
 import { WoolDetailComponent } from './wool-detail/wool-detail.component';
 import { WoolService } from './wool.service';
 import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [ WoolService ],
+  providers: [ WoolService, MessageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
