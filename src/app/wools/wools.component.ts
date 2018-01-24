@@ -9,22 +9,19 @@ import { WOOLS } from '../mock-wool-list';
 })
 export class WoolsComponent implements OnInit {
 
+
     wools = WOOLS;
 
-    wool: Wool = {
-        id: 1,
-        name: 'Herding Cats',
-        fiber: 'Superwash Targhee',
-        month: 'March 2017'
-    };
+    selectedWool: Wool;
 
-
-
+    
     constructor() { }
 
     ngOnInit() {
     }
 
-
+    onSelect(wool: Wool): void {
+        this.selectedWool = wool;
+    }
 
 }

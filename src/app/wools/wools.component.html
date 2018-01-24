@@ -1,29 +1,31 @@
 <h2>My Wool Stash</h2>
 <ul class="wools">
-  <li *ngFor="let wool of wools">
+  <li *ngFor="let wool of wools" [class.selected]="wool === selectedWool" (click)="onSelect(wool)">
     <span class="badge">{{wool.id}}</span> {{wool.name}}
   </li>
 </ul>
 
 
+<div *ngIf="selectedWool">
+
+    <h2>{{ selectedWool.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{ selectedWool.id }}</div>
 
 
-<h2>{{ wool.name | uppercase }} Details</h2>
-<div><span>id: </span>{{ wool.id }}</div>
+    <div>
+        <label>Name:
+          <input [(ngModel)]="selectedWool.name" placeholder="name">
+        </label>
+    </div>
+    <div>
+        <label>Month:
+          <input [(ngModel)]="selectedWool.month" placeholder="month">
+        </label>
+    </div>
+    <div>
+        <label>Fiber:
+          <input [(ngModel)]="selectedWool.fiber" placeholder="fiber">
+        </label>
+    </div>
 
-
-<div>
-    <label>Name:
-      <input [(ngModel)]="wool.name" placeholder="name">
-    </label>
-</div>
-<div>
-    <label>Month:
-      <input [(ngModel)]="wool.month" placeholder="month">
-    </label>
-</div>
-<div>
-    <label>Fiber:
-      <input [(ngModel)]="wool.fiber" placeholder="fiber">
-    </label>
 </div>
