@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { WoolsComponent } from './wools/wools.component';
 import { WoolDetailComponent } from './wool-detail/wool-detail.component';
 import { WoolService } from './wool.service';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WoolsComponent,
-    WoolDetailComponent
+    WoolDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
