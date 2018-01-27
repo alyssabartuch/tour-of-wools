@@ -17,7 +17,13 @@ export class DashboardComponent implements OnInit {
   }
 
   getWools(): void {
-    this.woolService.getWools()
-      .subscribe(wools => this.wools = wools.slice(1, 5));
+
+      this.woolService.getWools().subscribe(wools => this.wools = this.getHighlights(wools));
   }
+
+  getHighlights(woolsList) {
+
+      return woolsList.slice((woolsList.length)-4);
+  }
+
 }
