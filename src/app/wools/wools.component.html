@@ -1,4 +1,15 @@
 <h2>My Wool Stash</h2>
+
+<div>
+  <label>Wool name:
+    <input #woolName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(woolName.value); woolName.value=''">
+    add
+  </button>
+</div>
+
 <ul class="wools">
     <li *ngFor="let wool of wools">
         <a routerLink="/detail/{{wool.id}}">

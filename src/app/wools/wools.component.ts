@@ -27,4 +27,11 @@ export class WoolsComponent implements OnInit {
         this.woolService.getWools().subscribe(wools => this.wools = wools);
     }
 
+
+    add(name: string): void {
+        name = name.trim();
+        if (!name) { return; }
+        this.woolService.addWool({ name } as Wool).subscribe(wool => {this.wools.push(wool);});
+    }
+
 }

@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Wool } from '../wool';
-
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { Wool } from '../wool';
 import { WoolService }  from '../wool.service';
 
 @Component({
@@ -32,4 +31,7 @@ export class WoolDetailComponent implements OnInit {
         this.location.back();
     }
 
+    save(): void {
+        this.woolService.updateWool(this.wool).subscribe(() => this.goBack());
+    }
 }
